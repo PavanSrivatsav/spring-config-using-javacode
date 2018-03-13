@@ -13,7 +13,7 @@ public class MainSpringClass {
 		System.out.println(c.getDailyFortune());
 
 		FormulaOneCoach f = context.getBean("formulaOneCoachBean", FormulaOneCoach.class);
-		System.out.println(f.getCountry());
+		System.out.println("coach country=>" + f.getCountry());
 		context.close();
 	}
 

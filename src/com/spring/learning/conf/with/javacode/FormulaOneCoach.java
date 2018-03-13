@@ -10,7 +10,7 @@ public class FormulaOneCoach implements Coach {
 	public String getCountry() {
 		return country;
 	}
-	
+
 	public FormulaOneCoach() {
 	}
 
@@ -30,7 +30,5 @@ public class FormulaOneCoach implements Coach {
 	public String getDailyFortune() {
 		return "formula one : " + fortuneService.getFortune();
 	}
-
-	
 
 }
