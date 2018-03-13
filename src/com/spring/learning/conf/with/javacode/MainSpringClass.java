@@ -5,12 +5,16 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class MainSpringClass {
 
 	public static void main(String[] args) {
-		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(FormulaOneCoach.class);
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
+				SpringConfWithJavaCode.class);
 
-		Coach c = context.getBean("formulaOneCoach", Coach.class);
+		Coach c = context.getBean("formulaOneCoachBean", Coach.class);
 		System.out.println(c.getDailyWorkout());
-		context.close();
+		System.out.println(c.getDailyFortune());
 
+		FormulaOneCoach f = context.getBean("formulaOneCoachBean", FormulaOneCoach.class);
+		System.out.println(f.getCountry());
+		context.close();
 	}
 
 }
